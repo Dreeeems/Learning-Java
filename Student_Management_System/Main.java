@@ -1,23 +1,27 @@
+/* This program was made by Dreeeems 
+   Github page : https://github.com/Dreeeems
+*/
 package Student_Management_System;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import  Student_Management_System.Student;
 
 public class Main {
    static ArrayList <Student> students =  new ArrayList<Student>();
     static Boolean running =true;
    static Scanner  scanner  = new Scanner(System.in);
         public static void management(int response){
-            
+            // Switch will check the value of respone 
             switch (response) {
+
+                //check all students
                 case 1:
                 for(Student student : students){
-                    System.out.println(student);
                     System.out.println("");
-                    System.out.println(student.getName() + " is " + student.getAge() + " years old." +" id : " + student.getId());
+                    System.out.println(student.getName() + " is " + student.getAge() + " years old." +" id is: " + student.getId() +"and email is: " +student.getEmail() );
                 }
                     break;
+                    //create a new student
                 case 2:
                 System.out.println("Name");
                String name= scanner.next();
@@ -29,9 +33,19 @@ public class Main {
                     Student newStudent = new Student(name,email,age,id);
                     students.add(newStudent);
                     break;
+                    //delete a student
                 case 3:
+                System.out.println("Wich student need to be remove ? ");
+                for(Student student : students){
+                    System.out.println("");
+                    System.out.println(student.getName() + " is " + student.getAge() + " years old." +" id is: " + student.getId() +"and email is: " +student.getEmail());
                     
+                    
+                }
+                int res= scanner.nextInt();
+                students.remove(res-1);
                     break;
+                    //quit the program
                 case 4:
                     running = false;
                     break;
