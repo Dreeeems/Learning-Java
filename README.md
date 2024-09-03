@@ -6,4 +6,4 @@ A comprehensive Java journey to learn the basics through various projects!
 
 ## 🚀 Projects
 
-[🧮 Calculator App 🧮](https://github.com/Dreeeems/Learning-Java/tree/master/Calculator)
+[🧮 Calculator App 🧮](https://github.com/Dreeeems/Learning-Java/tree/calculator)
