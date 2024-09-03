@@ -8,7 +8,7 @@ public class Student {
     private String name;
     private String email;
     private int age;
-    private int
+    private int id;
 
     //Constructor
 
@@ -16,6 +16,7 @@ public class Student {
         this.name = name;
         this.email = email;
         this.age = age;
+        this.id = id;
     }
     // Methods
     public String getName(){
@@ -29,6 +30,10 @@ public class Student {
         return age;
     }
 
+    public int getId(){
+        return id;
+    }
+
     public void setName(String name){
         this.name = name;   
     }
@@ -37,5 +42,8 @@ public class Student {
     }
     public void setAge(int age){
         this.age = age;   
+    }
+    public void setId(int id){
+        this.id = id;   
     }
 }
