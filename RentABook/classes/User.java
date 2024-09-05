@@ -15,7 +15,7 @@ public class User {
         this.email = email;
         this.id = id;
         this.rentId = rentId;
-        this.books = books
+        this.books = books;
     }
 
     //Methods
