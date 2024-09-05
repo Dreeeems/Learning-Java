@@ -6,6 +6,8 @@ A comprehensive Java journey to learn the basics through various projects!
 
 ## 🚀 Projects
 
+### Console Apps
+
 [🧮 Calculator App 🧮](https://github.com/Dreeeems/Learning-Java/tree/calculator)
 
 [👨‍🎓 Student Management System 👨‍🎓](https://github.com/Dreeeems/Learning-Java/tree/SMS)
