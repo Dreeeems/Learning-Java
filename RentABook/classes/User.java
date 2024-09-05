@@ -9,16 +9,16 @@ public class User {
     private String email;
     private int id;
     private int rentId;
-    private String books;
     public static ArrayList<User> userList = new ArrayList<>();
+    private ArrayList<Book> books = new ArrayList<>();
     //Constructor
-    public User (String name, String lastName , String email , int id, int rentId,String books){
+    public User (String name, String lastName , String email , int id, int rentId){
         this.name = name;
         this.lastName = lastName;
         this.email = email;
         this.id = id;
         this.rentId = rentId;
-        this.books = books;
+        this.books = new ArrayList<>();
         updateUserList(this);
         
     }
@@ -55,9 +55,9 @@ public class User {
         return rentId;
      }
 
-     public String getAllBook(){
+     public ArrayList<Book> getBooks() {
         return books;
-     }
+    }
        public void updateUserList(User user) {
         
         userList.add(user);
@@ -65,7 +65,14 @@ public class User {
     }
 
 
-
+    public static  User findUserById(int id){
+      for(User user : userList){
+         if(user.id == id){
+            return user;
+         }
+      }
+      return null;
+    }
 
 
 }

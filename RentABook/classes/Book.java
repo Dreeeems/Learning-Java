@@ -9,7 +9,6 @@ public class Book {
     private int id;
 
     private User rentedBy; 
-    private int rentId; 
     private Boolean rented;
 
     public static ArrayList<Book> booksList = new ArrayList<>();  // Liste de tous les livres
@@ -21,7 +20,6 @@ public class Book {
         this.date = date;
         this.id = id;
         this.rentedBy = null;
-        this.rentId = this.id; 
         this.rented= false; 
         booksList.add(this);  
     }
@@ -50,12 +48,14 @@ public class Book {
         return rentedBy;
     }
 
-    public int getRentId() {
-        return rentId;
-    }
     public Boolean isRented(){
         return rented;
     }
+
+    public void setRent(Boolean rented){
+        this.rented = rented;
+    }
+
 
 
     
@@ -64,5 +64,22 @@ public class Book {
         for(Book book : booksList){
              System.out.println("Book : " +book.getId()   +" " +"Title : " +  book.getName()+" Author : "+book.getAuthor()+" Release date : "+book.getDate()+" "+ "Rented : "+ book.isRented());
         }
+    }
+
+    public static void rentBook(Book book, int id,User user){
+            if(!book.isRented() && user.getBooks().isEmpty()||  user.getBooks()==null){
+                book.setRent(true);
+                book.rentedBy = user;
+        }
+        
+    }
+
+     public static  Book findBookById(int id){
+      for(Book book : booksList){
+         if(book.id == id){
+            return book;
+         }
+      }
+      return null;
     }
 }
